@@ -46,7 +46,7 @@ if not [%2]==[] (
 REM ### Resolve the appropriate script and execute it.
 if exist "%CLODDIR%tools\%TARGET%.cmd" (
     shift
-    "%CLODDIR%tools\%TARGET%.cmd" %*
+    cmd.exe /c "%CLODDIR%tools\%TARGET%.cmd" %*
     goto :END
 )
 if exist "%CLODDIR%tools\%TARGET%.ps1" (
