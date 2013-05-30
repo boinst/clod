@@ -1,0 +1,4 @@
+## Folders created by the build, or during runtime
+/src/bin
+/src/pkgs
+/src/var
