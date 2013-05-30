@@ -44,13 +44,13 @@ if not [%2]==[] (
 )
 
 REM ### Resolve the appropriate script and execute it.
-if exist "%CLODDIR%bin\%TARGET%.cmd" (
+if exist "%CLODDIR%tools\%TARGET%.cmd" (
     shift
-    "%CLODDIR%bin\%TARGET%.cmd" %*
+    "%CLODDIR%tools\%TARGET%.cmd" %*
     goto :END
 )
-if exist "%CLODDIR%scripts\%TARGET%.ps1" (
-    set SCRIPT=%CLODDIR%scripts\%TARGET%.ps1
+if exist "%CLODDIR%tools\%TARGET%.ps1" (
+    set SCRIPT=%CLODDIR%tools\%TARGET%.ps1
     shift
     powershell.exe -executionpolicy bypass -file "!SCRIPT!" %TARGET_ARGS%
     goto :END
